@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Layout</title>
+  
+</head>
+<body>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+  @media (min-width: 600px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+  }
+ 
+
+    </style>
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Image 1">
+      <h2>Card 1</h2>
+      <p>This is a description for Card 1.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Image 2">
+      <h2>Card 2</h2>
+      <p>This is a description for Card 2.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Image 3">
+      <h2>Card 3</h2>
+      <p>This is a description for Card 3.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/150" alt="Image 4">
+      <h2>Card 4</h2>
+      <p>This is a description for Card 4.</p>
+    </div>
+  </div>
+</body>
+</html>
